@@ -1,0 +1,43 @@
+@use "../abstracts/placeholders" as *;
+@use "../abstracts/mixins" as *;
+.nav {
+	&--header {
+		margin-right: 70px;
+		@include respond(bp-1200) {
+			display: none;
+		}
+	}
+	&--footer {
+		justify-content: flex-end;
+		@include respond(bp-768) {
+			display: none;
+		}
+	}
+	&__list {
+		@extend %flex-align;
+		gap: 65px;
+		&--footer {
+			@extend .nav__list;
+			justify-content: flex-end;
+			@include respond(bp-992) {
+				gap: 20px;
+			}
+		}
+	}
+	&__item {
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		line-height: 1;
+	}
+	&__icon-container {
+		height: 24px;
+		width: 24px;
+	}
+	&__icon {
+	}
+	&__text {
+	}
+}

@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/placeholders" as *;
+@use "../abstracts/mixins" as *;
+.user-area {
+	@extend %flex-align;
+	gap: 47px;
+	margin-right: auto;
+	@include respond(bp-576) {
+		display: none;
+	}
+	&__account {
+		@extend %flex-full;
+		gap: 5px;
+		background-color: $color-primary;
+		border-radius: 13px;
+		height: 35px;
+		width: 131px;
+	}
+	&__account-icon {
+		width: 15px;
+		height: 15px;
+	}
+	&__lang {
+		@extend %flex-full;
+		gap: 12px;
+	}
+	&__lang-icon {
+		width: 25px;
+		height: 25px;
+	}
+}

@@ -1,0 +1,162 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// **********************************************************************************************
+// **                                                                                          **
+// **                                   GENERAL TYPOGRAPHY                                     **
+// **                                                                                          **
+// **********************************************************************************************
+//HEADINGS
+///////////////////////////////////////////////
+
+.section-heading {
+	font-size: 45px;
+	font-weight: 500;
+	@include respond(bp-992) {
+		font-size: 32px;
+	}
+}
+.heading-25 {
+	font-size: 25px;
+	font-weight: 400;
+}
+
+//PARAGRAPHS
+//////////////////////////////////////////////
+
+// **********************************************************************************************
+// **                                                                                          **
+// **                                     LAYOUTS                                              **
+// **                                                                                          **
+// **********************************************************************************************
+.header {
+	font-size: 18px;
+	color: $color-grey;
+}
+
+.footer {
+	font-size: 18px;
+	color: $color-white;
+	&__nav {
+		font-weight: 500;
+	}
+}
+// **********************************************************************************************
+// **                                                                                          **
+// **                                     components                                           **
+// **                                                                                          **
+// **********************************************************************************************
+.user-area {
+	&__account {
+		color: $color-white;
+		font-size: 15px;
+		font-weight: 500;
+	}
+
+	&__lang {
+		font-size: 18px;
+	}
+}
+.order-steps {
+	font-size: 24px;
+	@include respond(bp-992) {
+		font-size: 18px;
+	}
+}
+.cart-item {
+	&__title {
+		color: $color-grey;
+		font-size: 18px;
+	}
+	&__price {
+		color: $color-grey-dark;
+		font-size: 18px;
+	}
+	&__price--curr {
+		color: rgba(147, 144, 144, 1);
+		font-size: 12px;
+	}
+}
+.counter {
+	color: $color-grey-dark;
+	&__qnt {
+		font-size: 25px;
+	}
+}
+// **********************************************************************************************
+// **                                                                                          **
+// **                                        PAGES                                             **
+// **                                                                                          **
+// **********************************************************************************************
+
+.order {
+	&__title {
+		font-size: 25px;
+		color: $color-grey;
+		@include respond(bp-992) {
+			font-size: 18px;
+		}
+	}
+	&__price {
+		font-size: 25px;
+		color: $color-grey-dark;
+		@include respond(bp-992) {
+			font-size: 18px;
+		}
+	}
+	&__curr {
+		font-size: 18px;
+		color: #939090;
+	}
+	&__ad {
+		font-size: 16px;
+		color: #32c973;
+	}
+	&__input {
+		font-size: 18px;
+	}
+	&__input {
+		&::placeholder {
+			color: rgba(147, 144, 144, 1);
+		}
+	}
+	&__coupon-btn {
+		font-size: 20px;
+		color: $color-grey-dark;
+	}
+	&__total {
+		font-size: 30px;
+		color: #4a4747;
+		@include respond(bp-992) {
+			font-size: 24px;
+		}
+	}
+	&__total-price {
+		font-size: 30px;
+		color: $color-primary;
+		@include respond(bp-992) {
+			font-size: 24px;
+		}
+	}
+	&__total-price-curr {
+		font-size: 18px;
+		color: #939090;
+	}
+	&__err {
+		font-size: 15px;
+		color: $color-grey;
+	}
+	&__err-price {
+		color: $color-primary;
+	}
+	&__err-curr {
+		color: #939090;
+	}
+	&__btn {
+		font-size: 22px;
+		color: #ffffff;
+		@include respond(bp-992) {
+			font-size: 18px;
+		}
+	}
+}

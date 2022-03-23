@@ -1,0 +1,60 @@
+@use "../abstracts/placeholders" as *;
+@use "../abstracts/mixins" as *;
+.order-steps {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #fff;
+	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
+	border-radius: 16px;
+	padding: 35px 45px;
+	@include respond(bp-992) {
+		padding: 20px;
+	}
+
+	&__step {
+		@extend %flex-full;
+
+		&.active .order-steps__icon {
+			border: 2px solid rgba(50, 190, 166, 1);
+			background-color: #fff;
+			& svg {
+				stroke: rgba(50, 190, 166, 1);
+			}
+		}
+		&.done .order-steps__icon {
+			border: 2px solid rgba(50, 190, 166, 1);
+			background-color: rgba(50, 190, 166, 1);
+			& svg {
+				stroke: #fff;
+			}
+		}
+	}
+	&__icon {
+		@extend %flex-full;
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		margin-left: 10px;
+		border: 2px solid rgba(147, 144, 144, 1);
+		padding: 7px;
+		& svg {
+			stroke: #939090;
+		}
+		@include respond(bp-992) {
+			width: 20px;
+			height: 20px;
+			padding: 2px;
+		}
+	}
+	&__line {
+		flex: 1;
+		background-color: grey;
+		height: 2px;
+		margin: 0 22px;
+
+		@include respond(bp-992) {
+			display: none;
+		}
+	}
+}

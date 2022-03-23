@@ -1,0 +1,80 @@
+@use "../abstracts/placeholders" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+.order {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	padding: 20px;
+	gap: 40px;
+	@include respond(bp-992) {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	&__items {
+		display: flex;
+		flex-direction: column;
+		flex: 4;
+		gap: 15px;
+	}
+	&__details {
+		display: flex;
+		flex-direction: column;
+		flex: 3;
+		box-shadow: 0px 1.95273px 14.6455px rgba(0, 0, 0, 0.08);
+		background: #ffffff;
+		border-radius: 15px;
+		padding: 20px;
+	}
+	&__wrapper {
+		@extend %flex-align;
+		justify-content: space-between;
+		&:not(:first-child) {
+			margin-top: 11px;
+		}
+	}
+	&__ad {
+		margin-top: 5px;
+	}
+	&__coupon {
+		@extend %flex-align;
+		justify-content: space-between;
+		border-radius: 10px;
+		background-color: rgba(228, 234, 248, 0.4);
+		border-radius: 10px;
+		margin: 25px 0;
+	}
+	&__input {
+		border: none;
+		outline: none;
+		height: 50px;
+		flex: 1;
+		padding: 20px;
+		background-color: transparent;
+	}
+	&__coupon-btn {
+		width: 115px;
+		height: 50px;
+		background-color: rgba(228, 234, 248, 1);
+		border-radius: 10px;
+	}
+	&__err {
+		@extend %flex-align;
+		gap: 7px;
+	}
+	&__confirm {
+		display: flex;
+		flex-direction: column;
+		margin: 30px auto 0 auto;
+		gap: 10px;
+	}
+	&__btn {
+		width: 350px;
+		height: 50px;
+		background: #cfcfcf;
+		border-radius: 20px;
+	}
+	&__btn.active {
+		background: $color-primary;
+	}
+}

@@ -1,0 +1,21 @@
+@use "../abstracts/placeholders" as *;
+.counter {
+	@extend %flex-align;
+	gap: 17px;
+	&__btn {
+		@extend %flex-full;
+		border-radius: 9px;
+		background-color: #f0f6ff;
+
+		&--big {
+			@extend .counter__btn;
+			height: 42px;
+			width: 42px;
+		}
+		&--small {
+			@extend .counter__btn;
+			height: 32px;
+			width: 32px;
+		}
+	}
+}
